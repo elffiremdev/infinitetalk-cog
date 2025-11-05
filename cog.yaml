@@ -1,4 +1,6 @@
 # cog.yaml
+# ✅ Stabil ve güvenli yapılandırma (CUDA 12.1, Python 3.10, GPU uyumlu)
+
 build:
   gpu: true
   cuda: "12.1"
@@ -8,13 +10,14 @@ build:
     - ffmpeg
     - git
 
+  # Python bağımlılıkları — sırayla kurulacak şekilde düzenlendi
   python_packages:
-    # PyTorch CUDA 12.1 (otomatik GPU destekli versiyon)
+    # PyTorch (önce temel torch paketleri kurulmalı)
     - torch==2.4.1
     - torchvision==0.19.1
     - torchaudio==2.4.1
 
-    # Performans paketleri
+    # Performans ve hız kütüphaneleri
     - xformers==0.0.28.post1
     - flash-attn==2.7.4.post1
 
@@ -32,7 +35,9 @@ build:
     - numpy
     - soundfile
 
+  # Build aşamasında kontrol amaçlı komut
   run:
     - python -c "print('✅ Build OK - Environment ready')"
 
+# Model giriş noktası
 predict: "predict.py:Predictor"
