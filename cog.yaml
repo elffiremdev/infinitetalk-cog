@@ -10,12 +10,12 @@ build:
 
   python_packages:
     # PyTorch CUDA 12.1
-    - "torch==2.4.1+cu121"          --index-url https://download.pytorch.org/whl/cu121
-    - "torchvision==0.19.1+cu121"   --index-url https://download.pytorch.org/whl/cu121
-    - "torchaudio==2.4.1+cu121"     --index-url https://download.pytorch.org/whl/cu121
+    - "torch==2.4.1+cu121"          
+    - "torchvision==0.19.1+cu121"   
+    - "torchaudio==2.4.1+cu121"   
 
     # Performans paketleri
-    - "xformers==0.0.28.post1"      --index-url https://download.pytorch.org/whl/cu121
+    - "xformers==0.0.28.post1"     
     - "flash_attn==2.7.4.post1"
 
     # Genel bağımlılıklar
